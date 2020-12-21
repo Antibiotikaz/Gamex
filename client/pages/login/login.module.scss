@@ -1,0 +1,47 @@
+@import "../../styles/global.scss";
+
+.LoginForm {
+  margin: 11em auto;
+  padding: 3em 0;
+  width: 30%;
+  background-color: $blackOpacity06;
+
+  form {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 55%;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.8em;
+      text-align: center;
+    }
+    input {
+      transform: skewX(-20deg);
+      font-size: 1.1rem;
+      margin-bottom: 0.7em;
+      background-color: $blackOpacity06;
+      color: $white;
+      text-align: center;
+
+      &::placeholder {
+        color: $white;
+        text-align: center;
+        transform: skewX(20deg);
+      }
+    }
+
+    button {
+      font-size: 1.3rem;
+      color: $white;
+      transform: skewX(-20deg);
+      list-style-type: none;
+      background-color: $bluredRed;
+      border: none;
+      p {
+        transform: skewX(20deg);
+      }
+    }
+  }
+}
