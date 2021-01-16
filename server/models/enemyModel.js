@@ -15,6 +15,12 @@ const enemySchema = new Schema({
   fullHealth: {
     type: Number,
   },
+  minExp: {
+    type: Number,
+  },
+  maxExp: {
+    type: Number,
+  },
 });
 
 module.exports = {

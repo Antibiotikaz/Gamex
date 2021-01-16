@@ -34,6 +34,16 @@ const authReducer = (state = initialState, action) => {
         ...state,
         user: action.payload,
       };
+      case types.NEW_STATS_AFTER_BATTLE:
+        return {
+          ...state,
+          msg: "very gud"
+        };
+        case types.USER_STATS_RESET:
+          return {
+            ...state,
+            user: action.payload,
+          };
     default:
       return state;
   }
