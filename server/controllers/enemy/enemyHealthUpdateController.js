@@ -12,12 +12,12 @@ exports.updateHealth = async (req, res) => {
     }
 
     let updatedHealth;
-    if (enemy.health === 0) {
+   
+    if (enemy.health <= 0) {
       updatedHealth = enemy.fullHealth;
     } else {
       updatedHealth = enemy.health - damage;
     }
-
     await enemy.updateOne({ health: updatedHealth });
 
     return res.json({

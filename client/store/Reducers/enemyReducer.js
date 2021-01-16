@@ -23,6 +23,12 @@ const enemyReducer = (state = initialState, action) => {
             enemy: action.payload,
             isSpawned: true,
           }
+          case types.ENEMY_STATS_RESET:
+            return {
+              ...state,
+              enemy: action.payload,
+             
+            }
     default:
       return state;
   }

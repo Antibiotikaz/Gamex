@@ -24,3 +24,24 @@ export const updateEnemyHealth = ({enemyID, enemyHealth, damage }) => async (dis
             console.log(err);
       });
   };
+
+  export const resetEnemyHealth = ({enemyID }) => async (dispatch) => {
+    const body = {
+        enemyID,
+    };
+    
+    await axios
+      .put(
+        `http://localhost:9000/enemies/health/updateAfterHit/${body.enemyID}`,
+        body
+      )
+      .then((res) => {
+        dispatch({
+          type: types.ENEMY_STATS_RESET,
+             payload: res.data,
+        });
+      })
+      .catch((err) => {
+            console.log(err);
+      });
+  };
